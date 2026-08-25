@@ -10,7 +10,7 @@ require("telescope").setup({
     borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
     layout_config = {
       height = 0.6,
-      width = 0.4,
+      width = 0.8,
       prompt_position = 'top',
       preview_width = 0
     },
@@ -26,5 +26,6 @@ require("telescope").setup({
 })
 
 utils.nnoremap("<leader>ff", builtin_pickers.find_files)
+utils.nnoremap("<leader>fg", builtin_pickers.live_grep)
 utils.nnoremap("<leader>fb", builtin_pickers.buffers)
 utils.nnoremap("<leader>fd", builtin_pickers.lsp_references)

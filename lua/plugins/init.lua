@@ -20,6 +20,8 @@ require("lazy").setup({
   { 'saghen/blink.cmp' },
   { 'arkav/lualine-lsp-progress' },
   { "rebelot/kanagawa.nvim" },
+  { "ThomasVanRiel/nvim-notediscovery" },
+  --[[
   {
     'sainnhe/gruvbox-material',
     lazy = false,
@@ -31,6 +33,8 @@ require("lazy").setup({
       vim.cmd.colorscheme('gruvbox-material')
     end
   },
+  ]]
+
 })
 
 require("plugins.nvim-tree")
@@ -39,3 +43,5 @@ require("plugins.lualine")
 require("plugins.nvim-treesitter")
 require("plugins.mason-lspconfig")
 require("plugins.blink")
+require("plugins.kanagawa")
+require("plugins.notes")
