@@ -17,7 +17,12 @@ require("lazy").setup({
   { "nvim-tree/nvim-tree.lua", dependencies = {"nvim-tree/nvim-web-devicons"} },
   { "nvim-lualine/lualine.nvim", dependencies = {"nvim-tree/nvim-web-devicons"} },
   {"nvim-treesitter/nvim-treesitter", branch = 'master', lazy = false, build = ":TSUpdate"},
-  { 'saghen/blink.cmp' },
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
+    ft = { "markdown" },
+  },
+  { 'saghen/blink.cmp', version = '1.*' },
   { 'arkav/lualine-lsp-progress' },
   { "rebelot/kanagawa.nvim" },
   { "ThomasVanRiel/nvim-notediscovery" },
@@ -45,3 +50,4 @@ require("plugins.mason-lspconfig")
 require("plugins.blink")
 require("plugins.kanagawa")
 require("plugins.notes")
+require("plugins.render-markdown")
